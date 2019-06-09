@@ -1,0 +1,26 @@
+# First Project
+# Temperature Calculator
+###########################################
+# Given: Temperature in Grad Celsius C
+# Given: Temperature in Grad Kelvin K
+# K = C + 273.15
+
+
+def get_temperature():
+    while True:
+        C = input('Enter the temperatuer in degrees Celsius: ')
+        try:
+            C = float(C)
+            return C
+        except ValueError:
+            print('Your input is not a valid temperature')
+
+
+def convert_to_kelvin(C):
+    K = C + 273.15
+    return K
+
+
+if __name__ == '__main__':
+    C = get_temperature()
+    print(str(C) + ' degrees Celsius are ' + str(convert_to_kelvin(C)) + ' degrees Kelvin')
